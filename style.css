@@ -2,12 +2,38 @@
 Folha de estilo do site One page HTML5 e CSS3
 */
 
+/*Importação google fonts*/
+
+
+/* CSS Reset*/
+*{
+    margin:0;
+    border:0;
+    padding:0;
+  }
+
+  body{
+    font-family: Arial;
+     font-size:1em; /*1em tam  font padrao*/
+}
+
+    /*Layout*/
+    .Container{
+    margin:0 auto;
+    background-color: darkgreen;
+    }   
+
+
 /*Smartphone Portrait>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 
 /*Smartphone Landscape>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-@media (min-widht:576px){
+@media (min-width:576px){
     body{
         background-color: #0ff;
+    }
+    /*LAYOUT*/
+    .Container{
+        max-width:540px ;
     }
 }
 /*Tablet Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
@@ -15,16 +41,33 @@ Folha de estilo do site One page HTML5 e CSS3
     body{
         background-color: #ff0;
     }
+    /*LAYOUT*/
+    .Container{
+    max-width:720px ;
+    }
 }
+ 
 /*Tablet Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width:992px){
     body{
         background-color: #ff6600;
     }
+    /*LAYOUT*/
+    .Container{
+    max-width:960px ;
+    }
 }
+
+
 /*PC >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width:1200px){
     body{
         background-color:#ff0000
     }
+
+    /*LAYOUT*/
+    .Container{
+    max-width:1140px ;
+    }
 }
+
