@@ -3,6 +3,7 @@ Folha de estilo do site One page HTML5 e CSS3
 */
 
 /*Importação google fonts*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
 
 
 /* CSS Reset*/
@@ -12,24 +13,81 @@ Folha de estilo do site One page HTML5 e CSS3
     padding:0;
   }
 
-  body{
-    font-family: Arial;
-     font-size:1em; /*1em tam  font padrao*/
+  body{ 
+     font-family: "Open Sans", sans-serif;
+     font-size:1em; /* tam  font padrao*/
 }
 
     /*Layout*/
     .Container{
     margin:0 auto;
-    background-color: darkgreen;
-    }   
+    background-color: rgb(157, 213, 157);
+    }  
+
+    /*Flexbox*/
+    .Flex{
+        display:flex;  /*Faz o container ficar flexivel*/
+        justify-content: space-between;
+        background-color: #a9a9;
+    }
+    
+    /*topo do site*/
+    #topo{
+        position: fixed;
+        right: 10px;     /*10 a direita*/
+        bottom: 10px;       /*10 abaixo e direita*/
+    }
 
 
 /*Smartphone Portrait>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 
+/*Cabeçalho*/
+header{
+    height: 60px;
+}
+
+#logo img{
+    width: 128px; /*Largura e altura*/
+    height: 128px;
+}
+#check{
+    display: none;
+}
+
+label{
+    font-size: 3em; /*simbolo do unicode*/
+    padding-right: 15px;
+}
+/*Estilos para os itens do menu*/
+nav ul{
+    list-style: none;
+    background-color: rgb(170, 66, 226);
+    min-height: 100vh;   /* define o tamanho total da tela*/
+    position: fixed;
+    top: 60px;
+    right: -100%;
+    width: 100%;
+    transition: all 0.5s;
+}
+
+#check:checked ~ ul{
+    right: 0;
+}
+
+nav ul li{
+    padding: 20px;
+    border-bottom: 1px solid #fff;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
 /*Smartphone Landscape>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width:576px){
     body{
-        background-color: #0ff;
+        background-color: rgb(242, 238, 230);
     }
     /*LAYOUT*/
     .Container{
@@ -39,7 +97,7 @@ Folha de estilo do site One page HTML5 e CSS3
 /*Tablet Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width:768px){
     body{
-        background-color: #ff0;
+        background-color: rgb(204, 204, 188);
     }
     /*LAYOUT*/
     .Container{
@@ -50,7 +108,7 @@ Folha de estilo do site One page HTML5 e CSS3
 /*Tablet Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width:992px){
     body{
-        background-color: #ff6600;
+        background-color: #e6dfdb;
     }
     /*LAYOUT*/
     .Container{
@@ -62,12 +120,48 @@ Folha de estilo do site One page HTML5 e CSS3
 /*PC >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width:1200px){
     body{
-        background-color:#ff0000
+        background-color:#e7ebee
     }
 
     /*LAYOUT*/
     .Container{
     max-width:1140px ;
     }
+
+       /*Cabeçalho*/
+
+       header{
+        height:120px;
+       }
+    
+    
+       #logo img{
+    width: 189px;
+    height:189px;
+    margin-top:30px;   
+    }
+
+    label{
+        display: none;   
+    }
+
+    nav ul{
+        position: static;
+        height:auto;
+        background-color: transparent;
+        margin-top:50px;
+    }
+
+    nav ul li{
+        float: left;
+        border: 0;
+    }
+    nav ul li a{
+        color:#ffff;
+    }
+    nav ul li a :hover{
+        color:#c00000;
+    }
+
 }
 

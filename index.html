@@ -11,14 +11,22 @@
 </head>
 <body>
     <!--Cabeçalho-->
-    <header>
-        <div class="conteiner">
+    <header id="inicio">
+        <div class="conteiner Flex"> <!--Faz o container ficar flexivel-->
             <div id="logo">
                 <img src="img/logo.png" alt="hal 9000">
             </div>
-
+            <nav>
+                <input type="checkbox" id="check">
+                <label for="check">&#8788;</label>
+                <ul>
+                    <li><a href="#inicio">Inicio </a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#conteudo">Conteúdo</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
         </div>
-    
     </header>
     
     <!--Destaque-->
@@ -27,17 +35,13 @@
              <h1>HTML5 e CSS3</h1>
             <h2>Voce faz , voce aprende.</h2>    
         </div>
-       
-    
     </main>
    
     <!--Sobre-->
-    <section>
+    <section id="sobre">
         <div class="container">
              <h2>Aprendendo na prática</h2>    
         </div>
-        
-    
     </section>
    
     <!--One Page-->
@@ -55,7 +59,7 @@
     </section>
 
     <!--Conteudo-->
-    <section>
+    <section id="conteudo">
         <div class="container">
            <h2>Conteudo</h2>
             <h3>HTML5</h3>
@@ -67,12 +71,12 @@
     </section>
     
     <!--Rodapé-->
-    <footer>
+    <footer id="contato">
         <div class="container">
 
         </div>
     </footer>
+    <a href="#inicio" id="topo"><img src="img/topo.png" alt="topo do site"></a>
 
-    
 </body>
 </html>
