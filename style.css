@@ -28,6 +28,14 @@ Folha de estilo do site One page HTML5 e CSS3
         display:flex;  /*Faz o container ficar flexivel*/
         justify-content: space-between;
     }
+    .Flex2 {
+        display: flex;
+        align-items: center;
+    }
+    .Flex3 {
+        display: flex;
+        flex-direction: column;
+    }
 
     .Botao{
         text-decoration: none;
@@ -36,7 +44,7 @@ Folha de estilo do site One page HTML5 e CSS3
         font-size: 1.3em;
         font-weight: 700;
         padding: 10px 40px; /*10px para cima/baixo, 40px direita/esquerda*/
-        border: 2px solid #c00000;
+        border: 2px solid #fff;
         border-radius: 25px;
     }
     
@@ -62,15 +70,19 @@ header{
 #check{
     display: none;
 }
-
+ 
+/*menu no cel*/
 label{
     font-size: 3em; /*simbolo do unicode*/
-    padding-right: 15px;
+    position: fixed;
+    top: 5px;
+    right: 15px;
+    color: rgba(0, 0, 0 , 0.5);
 }
 /*Estilos para os itens do menu*/
 nav ul{
     list-style: none;
-    background-color: rgb(247, 34, 34);
+    background-color:rgb(164, 15, 27);
     height: 100vh; /* define o tamanho total da tela*/
     position: fixed;
     top: 60px;
@@ -85,7 +97,7 @@ nav ul{
 
 nav ul li{
     padding: 20px;
-    border-bottom: 1px solid #c00000;
+    border-bottom: 1px solid #211a1a;
 }
 
 nav ul li a {
@@ -93,13 +105,14 @@ nav ul li a {
     color: #fff;
 }
 
-/*Destaque*/
+/*Destaque banner*/
 main{
-    height: 75vh;
+    height: 75vh; /*75% da tela*/
     background:url(img/banner.jpg);
     background-size: cover;
-    color: #fff;
-    display: flex;
+    background-position: center;
+    color: #fff; /* para todos os textos*/
+    display: flex;  /*Tecnica para centralizar um conteúdo*/
     flex-direction: column;
     justify-content: center;
     text-align: center;
@@ -114,6 +127,56 @@ main h2{
     margin: 20px 0px 50px 0px;
 }
 
+/*Sobre*/
+#sobre {
+    padding: 50px 0px;  /*Cria espacamento*/
+    background: url(img/background.png);
+    background-size: cover;
+    background-position: center;
+}
+
+#destaqueSobre {
+    display: none;
+}
+
+#textoSobre {
+    color: #fff;
+    padding:0px 10px;
+}
+
+textoSobre h2 {
+    margin-bottom: 20px;
+}
+
+.TopicosSobre {
+    margin-top: 20px;
+}
+
+.TopicosSobre img {
+    margin-right: 20px;
+}
+
+/*ONE PAGE*/
+#onepage {
+    padding: 50px 10px;
+}
+
+#onepage h2 {
+    margin-bottom: 10px;
+}
+
+#onepage p {
+    margin-bottom: 25px;
+}
+
+#video iframe {
+    width: 340px;
+    height: 191px;
+    border: 0;
+}
+
+
+    
 /*Smartphone Landscape>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width:576px){
    
@@ -121,9 +184,15 @@ main h2{
     .Container{
         max-width:540px ;
     }
-    /*Destaque*/
+    /*Destaque banner*/
     main h1, main h2{
         text-shadow: #fff 0.05em 0.5em 0.5em; /*Cria uma sombra nas tags*/
+    }
+
+    /*ONE PAGE*/
+    #video iframe {
+        width: 560px;
+        height: 315px;
     }
 }
 /*Tablet Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
@@ -165,16 +234,12 @@ main h2{
 
 /*PC >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width:1200px){
-
-
-
     /*LAYOUT*/
     .Container{
     max-width:1140px ;
     }
 
        /*Cabeçalho*/
-
        header{
         height:120px;
        }
@@ -209,6 +274,25 @@ main h2{
     nav ul li a :hover{
         color:#c00000;
     }
+    
+    /*Sobre*/
+    #sobre {
+        background-attachment: fixed; /*Fixa o background*/
+    }
+    #destaqueSobre {
+        display: inline;
+    }
 
+    #destaqueSobre img {
+        border-radius: 50%;    /*Deixa a imagem redonda*/
+        margin-right: 50px;
+    }
+
+    /*ONE PAGE*/
+    .Flex3 {
+        flex-direction: row;   /*Coloca u ao lado do outro em linha*/
+        align-items: center;
+    }
 }
+
 
