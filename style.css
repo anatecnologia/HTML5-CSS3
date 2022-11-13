@@ -143,7 +143,7 @@ main h2{
     padding:0px 10px;
 }
 
-textoSobre h2 {
+.textoSobre h2 {
     margin-bottom: 20px;
 }
 
@@ -173,6 +173,33 @@ textoSobre h2 {
     height: 191px;
     border: 0;
 }
+    /*WIREFRAME*/
+    #wireframe {
+        padding: 50px 0px;
+        background-size: cover;
+        background-position: center; /*Ajusta a imagem ao tamanho do dispositivo*/
+    }
+
+    #textoWire {
+        color: #fff;
+        padding: 0px 10px;
+    }
+
+    #textoWire h2 {
+        margin-bottom: 10px;
+    }
+
+    #textoWire p {
+        margin-bottom:40px;
+    }
+
+    #textoWire span {
+        display: none; /*Esconde em smarphones*/
+    }
+
+    #qrcode {
+        display: none;  /*Esconde QR*/
+    }
 
 /*Smartphone Landscape>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width:576px){
@@ -290,6 +317,26 @@ textoSobre h2 {
         flex-direction: row;   /*Coloca u ao lado do outro em linha*/
         align-items: center;
     }
+
+    /*Wireframe*/
+    #wireframe {
+        background-attachment: fixed;
+    } 
+
+    #wireframe span{
+        display: inline;
+    }
+
+    #qrcode {
+        display: inline;
+    }
+
+    #qrcode img {
+        width: 225px;
+        height: 225px;
+    }
 }
+
+
 
 
